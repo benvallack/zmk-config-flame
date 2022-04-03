@@ -22,14 +22,13 @@
  
 /* Layers */
 #define AL1 0
-#define GM 1
-#define AL2 2
-#define AL2U 8
-#define SM1 3
-#define SM2 4	
-#define NM1 5	
-#define SYS 6
-#define BT 7	
+#define AL2 1
+#define AL2U 7
+#define SM1 2
+#define SM2 3	
+#define NM1 4	
+#define SYS 5
+#define BT 6	
 / { 
     combos {
         compatible = "zmk,combos";
