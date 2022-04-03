@@ -1,0 +1,11 @@
+manifest:
+  remotes:
+    - name: benvallack
+      url-base: https://github.com/benvallack
+  projects:
+    - name: zmk
+      remote: benvallack
+      revision: with-tap-dance
+      import: app/west.yml
+  self:
+    path: config
