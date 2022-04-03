@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "card.dtsi"
+#include "flame.dtsi"
 
 &default_transform {
-	col-offset = <13>;
+	col-offset = <9>;
 };

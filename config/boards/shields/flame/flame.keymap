@@ -33,42 +33,37 @@
 / { 
     combos {
         compatible = "zmk,combos";
-        combo_game {
-            timeout-ms = <30>;
-	    key-positions = <2 3 4 5>;
-            bindings = <&to GM>;
-        };
         combo_sys {
             timeout-ms = <30>;
-	    key-positions = <4 5 6>;
+	    key-positions = <3 4 5>;
             bindings = <&to SYS>;
         };
         combo_caps {
             timeout-ms = <30>;
-	    key-positions = <12 13 14>;
+	    key-positions = <10 11 12>;
             bindings = <&caps_word>;
         };
         combo_bt  {
             timeout-ms = <10>;
-            key-positions = <13 14>;
+            key-positions = <11 12>;
             bindings = <&to BT>;
 	    layers = <SM1>; 
         };
         lalt {
             timeout-ms = <20>;
-	    key-positions = <10 11>;
+	    key-positions = <8 9>;
             bindings = <&kp LALT>; 
 	    layers = <SYS>; 
         };
         lclk {
             timeout-ms = <20>;
-	    key-positions = <12	13>;
+	    key-positions = <10 11>;
             bindings = <&mkp LCLK>;
 	    layers = <SYS>;
         };
         rclk {
             timeout-ms = <20>;
-	    key-positions = <4 5>;
+	    key-positions = <3 4>;
             bindings = <&mkp RCLK>;
 	    layers = <SYS>;
         };
@@ -120,86 +115,76 @@
 		#binding-cells = <0>;
 		bindings = < &sl AL2 >;
 	};
+	caps_alpha2macro: behavior_macro_2 {
+		compatible = "zmk,behavior-macro";
+		label = "MACRO2";
+		#binding-cells = <0>;
+		bindings = < &sl AL2U >;
+	};
     };
        keymap {
                 compatible = "zmk,keymap";
                 
        		alpha1 {
 		bindings = <
-		&trans 		&hm LCTL L 	&hm LALT G 	&hm LGUI D		&hm RGUI H 	&hm RALT U    		&hm RCTL O	&trans  
+		 		&hm LCTL L 	&hm LALT G 	&hm LGUI D		&hm RGUI H 	&hm RALT U    		&hm RCTL O	  
 		&hl NM1 I	&hl SM2 S	&hl SM1 R	&hl SYS T 	 	&hl SYS N    	&hl SM1 E   		&hl SM2 A 	&hl NM1 C
-		&trans	 	&trans 		&trans 		&mt LC(LS(LALT)) SPC 	&alpha2macro	&trans 			&trans		&trans
-								&trans	 		&trans
-		>;
-		};
-       		game {
-		bindings = <
-		&trans 		&kp L 		&kp G 		&kp D			&hm RGUI H 	&hm RALT U    		&hm RCTL O	&trans  
-		&kp I		&kp S		&kp R		&kp T 		 	&hl SYS N    	&hl SM1 E   		&hl SM2  A 	&hl NM1 C
-		&trans	 	&trans 		&trans 		&kp SPC 		&sl AL2		&trans 			&trans		&trans
-								&trans	 		&trans
+			 	 		 		&mt LC(LS(LALT)) SPC &key_repeat &caps_alpha2macro	&alpha2macro	 	
 		>;
 		};
        		alpha2 {
 		bindings = <
-		&trans 	 	&kp V 		&kp W		&kp M	 	 	&kp F    	&kp SQT			&kp Z 		&trans
+		 	 	&kp V 		&kp W		&kp M	 	 	&kp F    	&kp SQT			&kp Z 		&trans
 		&kp Q	 	&kp J 		&kp P		&kp K 			&kp B 		&kp DOT			&kp X		&kp Y 
-		&trans	 	&trans 		&trans 		&sk LSHIFT 		&sl AL2U	&trans			&trans		&trans
-								&trans	 		&trans
+			 	 		 		&sk LSHIFT 		&none &none &sl AL2U	
 		>;
 		};
 		
        		sym1 {
 		bindings = <
-		&trans 		&kp LA(N3)   	&kp LS(N3)	&kp DLLR	    	&kp LS(COMMA)	&kp LS(DOT)		&kp CARET	&trans
+		 		&kp LA(N3)   	&kp LS(N3)	&kp DLLR	    	&kp LS(COMMA)	&kp LS(DOT)		&kp CARET	
 		&kp GRAVE	&kp TILDE 	&kp MINUS      	&kp BSLH	 	&kp LBKT	&kp RBKT	 	&kp PIPE 	&kp SLASH
-		&trans		&trans  	&trans		&trans  		&trans		&trans 			&trans  	&trans
-							 	&trans		 	&trans
+				  				&trans  		&trans		&trans  	&trans
 		>;
 		};
 		sym2 {
 		bindings = <
-		&trans		&kp ATSN	&td LA(RBKT) LA(LS(RBKT))	&td  LA(LBKT) LA(LS(LBKT))	&kp LPRN	&kp RPRN 	&kp SEMI 	&trans
+				&kp ATSN	&td LA(RBKT) LA(LS(RBKT))	&td  LA(LBKT) LA(LS(LBKT))	&kp LPRN	&kp RPRN 	&kp SEMI 	
 		&kp STAR  	&kp PRCNT	&td QMARK EXCL       		&kp DQT   			&kp LBRC  	&kp RBRC	&kp AMPS	&kp COLON 
-		&trans 		&trans 		&trans  			&trans 				&trans 		&trans 		&trans 		&trans   
-						 				&trans				&trans
+		 		&trans 		&trans  			&trans 	&none &none &trans 		
 
 		>;
 		};
 
 		num {
 		bindings = <
-		&trans		&hm LCTL DOT 	&hm LALT N0	&hm LGUI N1 		&hm RGUI N2 	&hm RALT N3		&hm RCTL N4	&trans
+				&hm LCTL DOT 	&hm LALT N0	&hm LGUI N1 		&hm RGUI N2 	&hm RALT N3		&hm RCTL N4	
 		&kp MINUS	&kp PLUS 	&kp N5		&kp N6			&kp N7		&kp N8			&kp N9   	&kp EQUAL
-		&trans  	&trans 		&trans		&sr LSHIFT AL1 		&trans 		&trans 			&trans  	&trans 
-								&trans	 	 	&trans
+							&sr LSHIFT AL1 		&trans 		&trans 			&trans  	 
 		>;
 		};
 
 		sys {
 		bindings = <
-		&trans		 	&kp ESC			&kp LC(LS(TAB)) 	&kp RC(TAB)		&td LG(V) LG(C) 	&kp UP 		&td Q BKSP 			&trans
+				 	&kp ESC			&kp LC(LS(TAB)) 	&kp RC(TAB)		&td LG(V) LG(C) 	&kp UP 		&td Q BKSP 			
 		&td LG(GRAVE) TAB	&td HOME DEL		&td END LG(LBKT) 	&kp LG(RBKT)		&td TAB LEFT  		&kp DOWN 	&td  LC(LG(LS(N4))) RIGHT 	&kp RET 
-		&trans 			&trans 		 	&trans			&sr LSHIFT AL1 		&kp RGUI		&trans 		&trans				&trans 	   
-									 		&trans	 		&trans
+		 			 		 				&sr LSHIFT AL1 		&none &none &kp RGUI		
 		>;
 		};
 
 		bt {
 		bindings = <
-		&trans		&bt BT_PRV	&bt BT_NXT	&trans 			&trans 	&trans	&trans	&trans
+				&bt BT_PRV	&bt BT_NXT	&trans 			&trans 	&trans	&trans	
 		&bootloader  	&trans 		&trans 		&trans 			&trans 	&trans 	&trans	&bt BT_CLR
-		&trans 	 	&trans 		&trans		&to AL1			&trans  &trans  &trans 	&bt BT_CLR
-						 		&trans			&trans
+		 	 	 				&to AL1	&none &none	&none
 		>;
 		};
 
        		alpha2cap {
 		bindings = <
-		&trans 	 	&kp LS(V)	&kp LS(W)	&kp LS(M) 	 	&kp LS(F)    	&trans		&kp LS(Z)	&trans 
+		 	 	&kp LS(V)	&kp LS(W)	&kp LS(M) 	 	&kp LS(F)    	&trans		&kp LS(Z)	
 		&kp LS(Q) 	&kp LS(J) 	&kp LS(P)	&kp LS(K)		&kp LS(B)	&kp COMMA	&kp LS(X)	&kp LS(Y) 
-		&trans	 	&trans 		&trans 		&trans 			&kp LA(SEMI)	&trans		&trans		&trans
-								&trans	 		&trans
+			 	&trans 		&trans 			&trans	&none
 		>;
 		};
         
