@@ -79,6 +79,7 @@
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
+	    quick-tap-ms: <150>;
         };
         sr: shift_layer {
             compatible = "zmk,behavior-hold-tap";
@@ -98,6 +99,7 @@
             quick_tap_ms = <0>;
             flavor = "tap-preferred";
             bindings = <&sl>, <&kp>;
+	    quick-tap-ms: <150>;
         };
 	td: tapdance {
             compatible = "zmk,behavior-hold-tap";
