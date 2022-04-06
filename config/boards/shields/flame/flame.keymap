@@ -104,7 +104,7 @@
             label = "TAPDANCE";
             #binding-cells = <2>;
             tapping-term-ms = <190>;
-            quick_tap_ms = <0>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
