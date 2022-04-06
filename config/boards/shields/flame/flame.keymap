@@ -76,7 +76,7 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            quick_tap_ms = <150>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -95,7 +95,7 @@
             label = "HOMEROW_LAYERS";
             #binding-cells = <2>;
             tapping-term-ms = <220>;
-            quick_tap_ms = <150>;
+            quick-tap-ms = <250>;
             flavor = "tap-preferred";
             bindings = <&sl>, <&kp>;
         };
