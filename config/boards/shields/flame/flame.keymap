@@ -128,7 +128,7 @@
 		bindings = <
 		 		&hm LCTL L 	&hm LALT G 	&hm LGUI D		&hm RGUI H 	&hm RALT U    		&hm RCTL O	  
 		&hl NM1 I	&hl SM2 S	&hl SM1 R	&hl SYS T 	 	&hl SYS N    	&hl SM1 E   		&hl SM2 A 	&hl NM1 C
-			 	 		 		&mt LC(LS(LALT)) SPC &key_reapeat  &caps_alpha2macro	&alpha2macro	 	
+			 	 		 		&mt LC(LS(LALT)) SPC &key_repeat  &caps_alpha2macro	&alpha2macro	 	
 		>;
 		};
        		alpha2 {
