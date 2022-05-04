@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: zmk
       remote: benvallack
-      revision: with-tap-dance
+      revision: repeatrollfix-tapdance-macro-mouse-dongle
       import: app/west.yml
   self:
     path: config
